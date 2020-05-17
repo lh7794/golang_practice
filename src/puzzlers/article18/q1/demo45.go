@@ -7,7 +7,7 @@ import (
 	"runtime"
 )
 
-// underlyingError 会返回已知的操作系统相关错误的潜在错误值。
+// underlyingError 获取和返回已知的操作系统相关错误的潜在错误值。
 func underlyingError(err error) error {
 	switch err := err.(type) {
 	case *os.PathError:
@@ -35,6 +35,19 @@ func main() {
 	uError := underlyingError(err)
 	fmt.Printf("underlying error: %s (type: %T)\n",
 		uError, uError)
+	fmt.Println()
+
+	//示例1-2
+	r, w, err = os.Pipe()
+	if err != nil {
+		fmt.Printf("unexpected error: %s\n", err)
+		return
+	}
+	w.Write([]byte("hello,lihao"))
+	//w.Close()
+	_, err = r.Read([]byte("hell,lihao"))
+	uError = underlyingError(err)
+	fmt.Printf("underlying error: %s (type: %T)\n", uError, uError)
 	fmt.Println()
 
 	// 示例2。

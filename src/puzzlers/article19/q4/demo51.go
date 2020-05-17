@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 	defer fmt.Println("first defer")
+	fmt.Println("lihao")
 	for i := 0; i < 3; i++ {
 		defer fmt.Printf("defer in for [%d]\n", i)
 	}

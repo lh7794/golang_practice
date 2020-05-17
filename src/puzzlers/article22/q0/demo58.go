@@ -40,7 +40,8 @@ func main() {
 		go func(id int, writer io.Writer) {
 			defer func() {
 				sign <- struct{}{}
-			}()
+			}() //一个新的匿名函数
+
 			for j := 1; j <= max2; j++ {
 				// 准备数据。
 				header := fmt.Sprintf("\n[id: %d, iteration: %d]",

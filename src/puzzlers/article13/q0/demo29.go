@@ -41,20 +41,21 @@ type Cat struct {
 // 该方法会"屏蔽"掉嵌入字段中的同名方法。
 func (cat Cat) String() string {
 	return fmt.Sprintf("%s (category: %s, name: %q)",
-		cat.scientificName, cat.Animal.AnimalCategory, cat.name)
+		cat.Animal.scientificName, cat.Animal.AnimalCategory, cat.name)
 }
 
 func main() {
 	// 示例1。
 	category := AnimalCategory{species: "cat"}
-	fmt.Printf("The animal category: %s\n", category)
+	fmt.Println(category.String())
+	fmt.Println(category)
 
 	// 示例2。
 	animal := Animal{
 		scientificName: "American Shorthair",
 		AnimalCategory: category,
 	}
-	fmt.Printf("The animal: %s\n", animal)
+	fmt.Printf("The animal: %s\n", animal.String())
 
 	// 示例3。
 	cat := Cat{

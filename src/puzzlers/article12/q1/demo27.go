@@ -8,7 +8,7 @@ import (
 type operate func(x, y int) int
 
 // 方案1。
-func calculate(x int, y int, op operate) (int, error) {
+	func calculate(x int, y int, op operate) (int, error) {
 	if op == nil {
 		return 0, errors.New("invalid operation")
 	}
@@ -43,7 +43,7 @@ func main() {
 	// 方案2。
 	x, y = 56, 78
 	add := genCalculator(op)
-	result, err = add(x, y)
+	result, err = add(x, y) //result和err为genCalculator函数的返回值
 	fmt.Printf("The result: %d (error: %v)\n",
 		result, err)
 }

@@ -43,17 +43,17 @@ func main() {
 	fmt.Printf("The type of second dog is %T.\n", dog2)
 	fmt.Println()
 
-	// 示例2。
-	wrap := func(dog *Dog) Pet {
-		if dog == nil {
-			return nil
-		}
-		return dog
-	}
-	pet = wrap(dog2)
-	if pet == nil {
-		fmt.Println("The pet is nil.")
-	} else {
-		fmt.Println("The pet is not nil.")
-	}
+	// // 示例2。
+	// wrap := func(dog *Dog) Pet {
+	// 	if dog == nil {
+	// 		return nil
+	// 	}
+	// 	return dog
+	// }
+	// pet = wrap(dog2)
+	// if pet == nil {
+	// 	fmt.Println("The pet is nil.")
+	// } else {
+	// 	fmt.Println("The pet is not nil.")
+	// }
 }

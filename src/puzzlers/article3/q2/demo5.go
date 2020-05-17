@@ -2,7 +2,8 @@ package main
 
 import (
 	"flag"
-	"puzzlers/article3/q2/lib"
+
+	"geektime/Golang_Puzzlers/src/puzzlers/article3/q2/lib"
 )
 
 var name string

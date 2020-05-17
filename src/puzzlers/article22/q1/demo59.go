@@ -38,7 +38,7 @@ func main() {
 	var mu sync.Mutex
 
 	// genWriter 代表的是用于生成写入函数的函数。
-	genWriter := func(writer io.Writer) singleHandler {
+	genWriter := func(writer io.Writer) singleHandler { //singleHandler是一种函数类型
 		return func() (data string, n int, err error) {
 			// 准备数据。
 			data = fmt.Sprintf("%s\t",

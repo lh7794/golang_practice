@@ -12,6 +12,7 @@ func main() {
 	// 方式1。
 	_, ok1 := interface{}(container).([]string)
 	_, ok2 := interface{}(container).(map[int]string)
+	println(ok1, ok2)
 	if !(ok1 || ok2) {
 		fmt.Printf("Error: unsupported container type: %T\n", container)
 		return

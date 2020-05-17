@@ -51,8 +51,11 @@ func main() {
 	petTag := PetTag{name: "little pig"}
 	_, ok := interface{}(petTag).(Named)
 	fmt.Printf("PetTag implements interface Named: %v\n", ok)
+
+	_, ok = interface{}(petTag).(Animal)
+	fmt.Printf("PetTag implements interface Animal: %v\n", ok)
 	dog := Dog{
-		PetTag:         petTag,
+		PetTag: PetTag{name: "little pig"}, //不论初始化与否，都属于xx接口类型
 		scientificName: "Labrador Retriever",
 	}
 	_, ok = interface{}(dog).(Animal)

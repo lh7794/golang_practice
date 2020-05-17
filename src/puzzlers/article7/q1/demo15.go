@@ -18,12 +18,12 @@ func main() {
 	s3 := []int{1, 2, 3, 4, 5, 6, 7, 8}
 	s4 := s3[3:6]
 	fmt.Printf("The length of s4: %d\n", len(s4))
-	fmt.Printf("The capacity of s4: %d\n", cap(s4))
+	fmt.Printf("The capacity of s4: %d\n", cap(s4))//容量是从3开始，到切片结束
 	fmt.Printf("The value of s4: %d\n", s4)
 	fmt.Println()
 
 	// 示例3。
-	s5 := s4[:cap(s4)]
+	s5 := s4[:cap(s4)]//把切片的窗口向右扩展到最大，长度和容量都是5
 	fmt.Printf("The length of s5: %d\n", len(s5))
 	fmt.Printf("The capacity of s5: %d\n", cap(s5))
 	fmt.Printf("The value of s5: %d\n", s5)

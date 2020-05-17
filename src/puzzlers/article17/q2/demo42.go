@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	// 示例1。
+	// 示例1。  switch表达式的结果是int型，case表达式的结果是int8型，类型不同，无法判等
 	//value1 := [...]int8{0, 1, 2, 3, 4, 5, 6}
 	//switch 1 + 3 { // 这条语句无法编译通过。
 	//case value1[0], value1[1]:

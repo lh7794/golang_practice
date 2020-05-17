@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"puzzlers/article3/q4/lib"
+	"geektime/Golang_Puzzlers/src/puzzlers/article3/q4/lib"
 	//in "puzzlers/article3/q4/lib/internal" // 此行无法通过编译。
 	//"os"
 )

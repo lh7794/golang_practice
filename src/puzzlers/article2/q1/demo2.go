@@ -5,13 +5,14 @@ import (
 	"fmt"
 )
 
-var name string
+//var name string
 
-func init() {
-	flag.StringVar(&name, "name", "everyone", "The greeting object.")
-}
+//func init() {
+//}
 
 func main() {
 	flag.Parse()
-	fmt.Printf("Hello, %s!\n", name)
+	var name = flag.String("name", "everyone", "The greeting object.")
+
+	fmt.Printf("Hello, %s!\n", *name)
 }

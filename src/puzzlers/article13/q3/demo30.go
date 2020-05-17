@@ -43,10 +43,10 @@ func (cat Cat) String() string {
 
 func main() {
 	cat := New("little pig", "American Shorthair", "cat")
-	cat.SetName("monster") // (&cat).SetName("monster")
+	cat.SetName("monster") // (&cat).SetName("monster") 调用时取地址符哦
 	fmt.Printf("The cat: %s\n", cat)
 
-	cat.SetNameOfCopy("little pig")
+	cat.SetNameOfCopy("little pig") //值方法 数据不会改变
 	fmt.Printf("The cat: %s\n", cat)
 
 	type Pet interface {
@@ -56,8 +56,9 @@ func main() {
 		ScientificName() string
 	}
 
-	_, ok := interface{}(cat).(Pet)
+	_, ok := interface{}(cat).(Pet) //实现了以上4个方法就属于pet接口
 	fmt.Printf("Cat implements interface Pet: %v\n", ok)
 	_, ok = interface{}(&cat).(Pet)
 	fmt.Printf("*Cat implements interface Pet: %v\n", ok)
+
 }

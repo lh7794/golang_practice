@@ -17,7 +17,7 @@ func main() {
 			i, s9, len(s9), cap(s9))
 	}
 	fmt.Printf("a1: %v (len: %d, cap: %d)\n",
-		a1, len(a1), cap(a1))
+		a1, len(a1), cap(a1))//a1改变了
 	fmt.Println()
 
 }

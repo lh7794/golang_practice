@@ -14,7 +14,8 @@ func main() {
 		fmt.Printf("%T(%q) > %T(%q): %v\n",
 			str, str, myStr2, myStr2, str > myStr2)
 		fmt.Printf("Type %T is the same as type %T.\n", myStr1, str)
-
+		fmt.Println()
+		
 		strs := []string{"E", "F", "G"}
 		myStrs := []MyString(strs)
 		fmt.Printf("A value of type []MyString: %T(%q)\n",

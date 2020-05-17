@@ -15,7 +15,7 @@ func main() {
 		if p := recover(); p != nil {
 			fmt.Printf("panic: %s\n", p)
 		}
-
+		defer fmt.Println("21")
 		fmt.Println("Exit defer function.")
 	}()
 
